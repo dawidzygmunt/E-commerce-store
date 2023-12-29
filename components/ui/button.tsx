@@ -18,18 +18,20 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps> (({
       `
         w-auto
         rounded-full
-        bg-black
+        bg-[#1d1d1d]
         border-transparent
         px-5
         py-3
         disabled:cursor-not-allowed
         disabled:opacity-50
-        text-semibold
+        text-gray-100
+        font-semibold
         hover:opacity-75
         transition
       `, className
     )}  
     ref={ref}
+    {...props}
     >
       {children}
 
