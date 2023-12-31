@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
 import CartItem from "./components/cart-item";
+import Summary from "./components/summary";
 
 
 const CartPage = () => {
@@ -27,21 +28,17 @@ const CartPage = () => {
           <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
           <div className="mt-12 lg:grid lg:-cols-12 gap-x-12">
             <div className="lg:col-span-7">
-              {cart.items.length === 0 && 
-                <p className="text-neutral-500">No items added to cart</p>
-              }
-               
-            <ul>
-              {cart.items.map((item) => (
-                <CartItem 
-                  key={item.id}
-                  data={item}
-                />
-              ))}
-            </ul>
-
-
+              {cart.items.length === 0 && <p className="text-neutral-500">No items added to cart</p>}
+              <ul>
+                {cart.items.map((item) => (
+                  <CartItem 
+                    key={item.id}
+                    data={item}
+                  />
+                ))}
+              </ul>
             </div>
+            <Summary />
           </div>
         </div>
       </Container>
