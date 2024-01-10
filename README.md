@@ -3,6 +3,9 @@
 ## Opis projektu
 Ecommerce-store to pełnoprawny sklep internetowy zbudowany przy użyciu nowoczesnych technologii, takich jak Next.js, Tailwind CSS, Shadcn/ui oraz Stripe. Projekt ten umożliwia użytkownikom przeglądanie i zakup produktów online, obsługuje płatności za pomocą Stripe i dostarcza intuicyjny interfejs użytkownika.
 
+## Live
+Zobacz Demo: https://dawidzygmuntdev.pl/store
+
 ## Wymagania
 Aby uruchomić aplikację, upewnij się, że masz zainstalowane następujące narzędzia:
 - [Node.js](https://nodejs.org/)
