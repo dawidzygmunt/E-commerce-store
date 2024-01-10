@@ -1,7 +1,14 @@
+import { useRouter } from "next/navigation"
+import { MouseEventHandler } from "react"
+import usePreviewModal from "@/hooks/use-preview-modal"
+import useCart from "@/hooks/use-cart"
+
+
 import { Product } from '@/types'
 import Currency from './ui/currency';
 import Button from './ui/button';
 import { ShoppingCart } from 'lucide-react';
+import AddToCartButton from "@/app/(routes)/product/[productId]/components/add-to-cart-button"
 
 interface InfoProps {
   data: Product;
@@ -33,10 +40,7 @@ export const Info: React.FC<InfoProps> = ({
           <div className='h-6 w-6 rounded-full border border-gray-600' style={{ backgroundColor: data?.color?.value }} />
         </div>
         <div className='mt-10 flex items-center gap-x-3'>
-          <Button className='flex items-center gap-x-2 text-white'>
-            Add to Cart
-            <ShoppingCart />
-          </Button>
+          <AddToCartButton data={data}/>
         </div>
       </div>
     </div>
