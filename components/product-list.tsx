@@ -1,26 +1,23 @@
 import { Product } from "@/types"
-import NoResults from "./ui/no-results";
-import ProductCard from "./ui/products-card";
+import NoResults from "./ui/no-results"
+import ProductCard from "./ui/products-card"
 
 interface ProductListProps {
-  title: string,
-  items: Product[];
+  title: string
+  items: Product[]
 }
 
-const ProductList: React.FC<ProductListProps> = ({
-  title,
-  items
-}) => {
+const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
   return (
     <div className="space-y-4">
-      <h3 className="font-bold text-3xl">{title}</h3>
-      {items.length === 0 && <NoResults />}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:gir-cols-3 lg:grid-cols-4 gap-4" >
+      <div className="flex flex-col items-center justify-center gap-3">
+        <p className="text-blue-600 font-bold text-sm">Hurry up to buy</p>
+        <h3 className="font-bold text-3xl">{title}</h3>
+        {items.length === 0 && <NoResults />}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:gir-cols-3 lg:grid-cols-4 gap-4">
         {items.map((item) => (
-          <ProductCard 
-            key={item.id}
-            data={item}
-          />
+          <ProductCard key={item.id} data={item} />
         ))}
       </div>
     </div>
