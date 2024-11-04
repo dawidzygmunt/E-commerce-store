@@ -13,7 +13,7 @@ export const CircleCategories = async () => {
           (product) => product.category.id === category.id
         )
         return (
-          <Link href={`category/${category.id}`} key={category.id}>
+          <Link href={`/category/${category.id}`} key={category.id}>
             <div className="flex flex-col justify-center items-center">
               <div className="rounded-full bg-neutral-200 w-20 h-20 flex items-center justify-center text-center">
                 <Image
