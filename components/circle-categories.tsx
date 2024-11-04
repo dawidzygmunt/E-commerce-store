@@ -14,8 +14,8 @@ export const CircleCategories = async () => {
         )
         return (
           <Link href={`/category/${category.id}`} key={category.id}>
-            <div className="flex flex-col justify-center items-center">
-              <div className="rounded-full bg-neutral-200 w-20 h-20 flex items-center justify-center text-center">
+            <div className="group flex flex-col justify-center items-center">
+              <div className="rounded-full bg-neutral-200 group-hover:bg-neutral-300  w-20 h-20 flex items-center justify-center text-center transition-all shadow-md">
                 <Image
                   src={category.imageUrl}
                   alt={category.name}
